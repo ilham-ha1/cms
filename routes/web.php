@@ -33,7 +33,59 @@ use App\Http\Controllers\ArticleController;
 // Route::get('/about',[PageController::class,'about']);
 // Route::get('/articles/{id}',[PageController::class,'articles']);
 
-Route::get('/',[HomeController::class, 'index']);
-Route::get('/about',[AboutController::class,'about']);
-Route::get('/articles/{id}',[ArticleController::class,'articles']);
+// Route::get('/',[HomeController::class, 'index']);
+// Route::get('/about',[AboutController::class,'about']);
+// Route::get('/articles/{id}',[ArticleController::class,'articles']);
+
+// Route::prefix('category')->group(function(){
+//     Route::get('/marbel-edu-games', function(){
+//         echo "This is marbel-edu games page";
+//     });
+// });
+
+Route::get('/', function(){
+    return view('home');
+});
+
+Route::get('about-us', function(){
+    return view('about');
+});
+
+//belum
+Route::prefix('category')->group(function(){
+    Route::get('/marbel-edu-games', function(){
+        return view ('category.marbel-edu-games');
+    });
+    Route::get('/marbel-and-friends-kids-games', function(){
+        return view ('category.marbel-and-friends-kids-games');
+    });
+    Route::get('/riri-story-books', function(){
+        return view ('category.riri-story-books');
+    });
+    Route::get('/kolak-kids-songs', function(){
+        return view ('category.kolak-kids-songs');
+    });
+
+});
+
+Route::prefix('news')->group(function(){
+    Route::get('/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19', function(){
+        echo "educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19 ";
+    });
+    Route::get('/', function(){
+        echo "news ";
+    });
+});
+
+Route::prefix('program')->group(function(){
+    Route::get('/karir', function(){
+        return view ('program.karir');
+    });
+    Route::get('/magang', function(){
+        return view ('program.magang');
+    });
+    Route::get('/kunjungan-industri', function(){
+        return view ('program.kunjungan-industri');
+    });
+});
 
