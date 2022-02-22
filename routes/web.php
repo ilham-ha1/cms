@@ -29,5 +29,5 @@ use App\Http\Controllers\PageController;
 //Practicum 2
 Route::get('/',[PageController::class, 'index']);
 Route::get('/about',[PageController::class,'about']);
-Route::get('/articles',[PageController::class,'articles']);
+Route::get('/articles/{id}',[PageController::class,'articles']);
 
