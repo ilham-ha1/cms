@@ -15,17 +15,19 @@ use App\Http\Controllers\PageController;
 */
 
 //Practicum 1
-Route::get('/', function () {
-    echo "Hi! Welcome To Laravel";
-});
-Route::get('/about', function(){
-    echo "Muhammad Ilham El Hakim <br>";
-    echo "2041720162 <br>";
-    echo "TI-2I";
-});
-Route::get('/articles/{id}', function($id){
-    echo "This is Article Pages with ID: ".$id;
-});
+// Route::get('/', function () {
+//     echo "Hi! Welcome To Laravel";
+// });
+// Route::get('/about', function(){
+//     echo "Muhammad Ilham El Hakim <br>";
+//     echo "2041720162 <br>";
+//     echo "TI-2I";
+// });
+// Route::get('/articles/{id}', function($id){
+//     echo "This is Article Pages with ID: ".$id;
+// });
 //Practicum 2
-
+Route::get('/',[PageController::class, 'index']);
+Route::get('/about',[PageController::class,'about']);
+Route::get('/articles',[PageController::class,'articles']);
 
