@@ -2,9 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\PageController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ArticleController;
+// use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\AboutController;
+// use App\Http\Controllers\ArticleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,49 +44,73 @@ use App\Http\Controllers\ArticleController;
 //     });
 // });
 
-Route::get('/', function(){
-    return view('home');
+// Route::get('/', function(){
+//     return view('home');
+// });
+
+// Route::get('about-us', function(){
+//     return view('about');
+// });
+
+// //belum
+// Route::prefix('category')->group(function(){
+//     Route::get('/marbel-edu-games', function(){
+//         return view ('category.marbel-edu-games');
+//     });
+//     Route::get('/marbel-and-friends-kids-games', function(){
+//         return view ('category.marbel-and-friends-kids-games');
+//     });
+//     Route::get('/riri-story-books', function(){
+//         return view ('category.riri-story-books');
+//     });
+//     Route::get('/kolak-kids-songs', function(){
+//         return view ('category.kolak-kids-songs');
+//     });
+
+// });
+
+// Route::prefix('news')->group(function(){
+//     Route::get('/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19', function(){
+//         echo "educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19 ";
+//     });
+//     Route::get('/', function(){
+//         echo "news ";
+//     });
+// });
+
+// Route::prefix('program')->group(function(){
+//     Route::get('/karir', function(){
+//         return view ('program.karir');
+//     });
+//     Route::get('/magang', function(){
+//         return view ('program.magang');
+//     });
+//     Route::get('/kunjungan-industri', function(){
+//         return view ('program.kunjungan-industri');
+//     });
+// });
+
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+ Route::get('/', function(){
+     return view('cloth');
+ });
+ Route::get('/support', function(){
+    return view('support');
 });
-
-Route::get('about-us', function(){
-    return view('about');
+Route::get('/account', function(){
+    return view('account');
 });
-
-//belum
-Route::prefix('category')->group(function(){
-    Route::get('/marbel-edu-games', function(){
-        return view ('category.marbel-edu-games');
-    });
-    Route::get('/marbel-and-friends-kids-games', function(){
-        return view ('category.marbel-and-friends-kids-games');
-    });
-    Route::get('/riri-story-books', function(){
-        return view ('category.riri-story-books');
-    });
-    Route::get('/kolak-kids-songs', function(){
-        return view ('category.kolak-kids-songs');
-    });
-
+Route::get('/store', function(){
+    return view('store');
 });
-
-Route::prefix('news')->group(function(){
-    Route::get('/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19', function(){
-        echo "educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19 ";
-    });
-    Route::get('/', function(){
-        echo "news ";
-    });
+Route::get('/contact', function(){
+    return view('contact');
 });
-
-Route::prefix('program')->group(function(){
-    Route::get('/karir', function(){
-        return view ('program.karir');
-    });
-    Route::get('/magang', function(){
-        return view ('program.magang');
-    });
-    Route::get('/kunjungan-industri', function(){
-        return view ('program.kunjungan-industri');
-    });
-});
-
