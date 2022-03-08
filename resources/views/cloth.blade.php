@@ -1,7 +1,9 @@
 @extends('layouts.index')
 
 @section('title')
-    Shop Around
+  @foreach ($post as $post)
+    {{ $post->title }}
+  @endforeach
 @endsection
 
 @section('content')
@@ -30,8 +32,6 @@
               <h3>LOREM IPSUM</h3>
               <div class="product-desc">
                 <h4>WOMEN’S</h4>
-                <p>Lorem ipsum dolor sit<br />
-                  amet</p>
                 <strong class="price">$58.99</strong> </div>
             </div>
           </li>
@@ -40,8 +40,7 @@
               <h3>LOREM IPSUM</h3>
               <div class="product-desc">
                 <h4>WOMEN’S</h4>
-                <p>Lorem ipsum dolor sit<br />
-                  amet</p>
+               
                 <strong class="price">$58.99</strong> </div>
             </div>
           </li>
@@ -50,8 +49,7 @@
               <h3>LOREM IPSUM</h3>
               <div class="product-desc">
                 <h4>WOMEN’S</h4>
-                <p>Lorem ipsum dolor sit<br />
-                  amet</p>
+                
                 <strong class="price">$58.99</strong> </div>
             </div>
           </li>
