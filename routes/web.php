@@ -115,3 +115,6 @@ Route::get('/store', function(){
 Route::get('/contact', function(){
     return view('contact');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
