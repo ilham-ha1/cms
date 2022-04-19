@@ -3,6 +3,9 @@
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ArticleController;
+
 // use App\Http\Controllers\PageController;
 // use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\AboutController;
@@ -101,7 +104,7 @@ use App\Models\Post;
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
- Route::get('/', [PostController::class,'index']);
+ Route::get('/', [PostController::class,'login']);
 
  Route::get('/support', function(){
     return view('support');
@@ -118,3 +121,5 @@ Route::get('/contact', function(){
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('articles', ArticleController::class);
